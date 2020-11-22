@@ -113,7 +113,17 @@ try
     console.log(addressBookArray.filter(c=>c.state=="California").length);
     let sortedArray=addressBookArray.slice(0).sort((c1,c2)=>c1.firstName.localeCompare(c2.firstName));
     sortedArray.forEach(c=>console.log(c.toString()+"\n"));
+
+    let sortedArray2=addressBookArray.slice(0).sort((c1,c2)=>c1.city.localeCompare(c2.city));
+    sortedArray2.forEach(c=>console.log(c.toString()+"\n"));
+
+    let sortedArray3=addressBookArray.slice(0).sort((c1,c2)=>c1.state.localeCompare(c2.state));
+    sortedArray3.forEach(c=>console.log(c.toString()+"\n"));
+
+    let sortedArray4=addressBookArray.slice(0).sort((c1,c2)=>c1.zipCode.localeCompare(c2.zipCode));
+    sortedArray4.forEach(c=>console.log(c.toString()+"\n"));
 } 
+
 catch (e)
 {
     console.error(e);
