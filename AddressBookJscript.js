@@ -107,6 +107,10 @@ try
         addressBookArray.push(contact);
     }
     addressBookArray.filter(contact=> contact.city=="San Francisco"||contact.state=="New York City").forEach(contact=>console.log(contact.toString()+"\n"));
+    console.log("Number of contacts belonginf to New York City");
+    console.log(addressBookArray.filter(c=>c.city=="New York City").length);
+    console.log("Number of contacts belonging to California");
+    console.log(addressBookArray.filter(c=>c.state=="California").length);
 } 
 catch (e)
 {
