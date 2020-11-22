@@ -96,11 +96,8 @@ try
     addressBookArray.push(new Contact("Cliff","Burton","Manhattan","New York City","New York","222222","2222222222","cburton@gmail.com"));
     addressBookArray.push(new Contact("Axl","Rose","Queens","New York City","New York","333333","3333333333","arose@gmail.com"));
     addressBookArray.forEach(contact=> console.log(contact.toString()+"\n"));
-    let index=addressBookArray.findIndex(c=>c.firstName=='James');
-    if(index==-1)
-    throw "Contact not found";
-    addressBookArray.splice(index,1);
-    console.log("Contact deleted successfully");
+    let count=addressBookArray.length;
+    console.log("Total Contacts in Address Book: "+count);
 } 
 catch (e)
 {
