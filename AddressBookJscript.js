@@ -94,12 +94,13 @@ try
     let addressBookArray=new Array();
     addressBookArray.push(new Contact("James","Hetfield","Downtown","San Francisco","California","111111","1111111111","jhetfield@yahoo.co.in"));
     addressBookArray.push(new Contact("Cliff","Burton","Manhattan","New York City","New York","222222","2222222222","cburton@gmail.com"));
+    addressBookArray.push(new Contact("Axl","Rose","Queens","New York City","New York","333333","3333333333","arose@gmail.com"));
     addressBookArray.forEach(contact=> console.log(contact.toString()+"\n"));
     let index=addressBookArray.findIndex(c=>c.firstName=='James');
     if(index==-1)
     throw "Contact not found";
-    addressBookArray[index].emailID="jhetfield@gcom";
-    console.log("Contact edited successfully");
+    addressBookArray.splice(index,1);
+    console.log("Contact deleted successfully");
 } 
 catch (e)
 {
