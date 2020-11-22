@@ -96,8 +96,16 @@ try
     addressBookArray.push(new Contact("Cliff","Burton","Manhattan","New York City","New York","222222","2222222222","cburton@gmail.com"));
     addressBookArray.push(new Contact("Axl","Rose","Queens","New York City","New York","333333","3333333333","arose@gmail.com"));
     addressBookArray.forEach(contact=> console.log(contact.toString()+"\n"));
-    let count=addressBookArray.length;
-    console.log("Total Contacts in Address Book: "+count);
+    function CheckDuplicate(contact)
+    {
+        if(addressBookArray.find(c=>c.firstName==contact.firstName && c.lastName==contact.lastName))
+        throw "Contact already exists";
+    }
+    function AddContacts(contact)
+    {
+        CheckDuplicate(contact);
+        addressBookArray.push(contact);
+    }
 } 
 catch (e)
 {
