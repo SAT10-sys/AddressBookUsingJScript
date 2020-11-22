@@ -91,8 +91,10 @@ toString()
 }
 try 
 {
-    let contact1=new Contact("James","Hetfield","Downtown","San Francisco","California","111111","1111111111","jhetfield@yahoo.co.in");
-    let contact2=new Contact("Cliff","Burton","Manhattan","New York City","New York","222222","2222222222","cburton@gmail.com");
+    let addressBookArray=new Array();
+    addressBookArray.push(new Contact("James","Hetfield","Downtown","San Francisco","California","111111","1111111111","jhetfield@yahoo.co.in"));
+    addressBookArray.push(new Contact("Cliff","Burton","Manhattan","New York City","New York","222222","2222222222","cburton@gmail.com"));
+    addressBookArray.forEach(contact=> console.log(contact.toString()+"\n"));
 } 
 catch (e)
 {
