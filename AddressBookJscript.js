@@ -106,6 +106,7 @@ try
         CheckDuplicate(contact);
         addressBookArray.push(contact);
     }
+    addressBookArray.filter(contact=> contact.city=="San Francisco"||contact.state=="New York City").forEach(contact=>console.log(contact.toString()+"\n"));
 } 
 catch (e)
 {
