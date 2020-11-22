@@ -111,6 +111,8 @@ try
     console.log(addressBookArray.filter(c=>c.city=="New York City").length);
     console.log("Number of contacts belonging to California");
     console.log(addressBookArray.filter(c=>c.state=="California").length);
+    let sortedArray=addressBookArray.slice(0).sort((c1,c2)=>c1.firstName.localeCompare(c2.firstName));
+    sortedArray.forEach(c=>console.log(c.toString()+"\n"));
 } 
 catch (e)
 {
